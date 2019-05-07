@@ -15,19 +15,19 @@
           <transition name="fade">
             <Affix :offset-top="70" @on-change="changeFixed" v-if="!isChangelog">
               <Menu mode="horizontal" class="em-docs__nav">
-                <Submenu name="100" v-for="(parent, i) in nav" :key="i"
-                  v-if="parent.children.length > 0">
-                  <template slot="title">{{parent.title}}</template>
-                  <Menu-group>
-                    <Menu-item
-                      :name="o"
-                      v-for="(item, o) in parent.children"
-                      :key="o"
-                      @click.native="go(item.id)">
-                      {{item.title}}
-                    </Menu-item>
-                  </Menu-group>
-                </Submenu>
+<!--                <Submenu name="100" v-for="(parent, i) in nav" :key="i"-->
+<!--                  v-if="parent.children.length > 0">-->
+<!--                  <template slot="title">{{parent.title}}</template>-->
+<!--                  <Menu-group>-->
+<!--                    <Menu-item-->
+<!--                      :name="o"-->
+<!--                      v-for="(item, o) in parent.children"-->
+<!--                      :key="o"-->
+<!--                      @click.native="go(item.id)">-->
+<!--                      {{item.title}}-->
+<!--                    </Menu-item>-->
+<!--                  </Menu-group>-->
+<!--                </Submenu>-->
                 <Menu-item
                   name="101"
                   @click.native="toChangelog">
